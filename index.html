@@ -167,13 +167,13 @@
         }
 
         .conteudo-aba {
-            display: none; /* Esconde por padrão */
+            display: none; 
             padding: 30px 0;
             animation: fadeIn 0.5s ease;
         }
 
         .conteudo-aba.ativo {
-            display: block; /* Mostra apenas a aba ativa */
+            display: block; 
         }
 
         @keyframes fadeIn {
@@ -184,7 +184,7 @@
         /* --- CARDS E GRIDS --- */
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
 
@@ -209,6 +209,15 @@
             font-size: 19px;
             margin-bottom: 12px;
             font-weight: 600;
+        }
+
+        .card h4 {
+            color: var(--cor-secundaria);
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .card p {
@@ -307,19 +316,45 @@
     <div id="aba-ensino" class="conteudo-aba ativo">
         <div class="cards">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=500" alt="Estudantes em sala de aula" class="card-img">
-                <h3>Ensino Fundamental</h3>
-                <p>Formação sólida e desenvolvimento integral dos nossos estudantes nos anos iniciais e finais.</p>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=600" alt="Alunos estudando juntos" class="card-img">
+                <h3>Ensino Fundamental (1º ao 9º ano)</h3>
+                <p style="margin-bottom: 10px;">Dividido em Anos Iniciais e Anos Finais, englobando o desenvolvimento básico integrado:</p>
+                
+                <h4>🗣️ Linguagens</h4>
+                <p>Língua Portuguesa, Arte, Educação Física e Língua Inglesa (nos Anos Finais).</p>
+                
+                <h4>📐 Matemática</h4>
+                <p>Matemática.</p>
+                
+                <h4>🌱 Ciências da Natureza</h4>
+                <p>Ciências.</p>
+                
+                <h4>🌍 Ciências Humanas</h4>
+                <p>Geografia e História.</p>
+                
+                <h4>⛪ Ensino Religioso</h4>
+                <p>Opcional e oferecido em conformidade com as diretrizes da rede de ensino.</p>
             </div>
+
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=500" alt="Livro aberto" class="card-img">
-                <h3>9º Ano</h3>
-                <p>Preparação intensa e focada para a transição para o Ensino Médio.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=500" alt="Jovens estudantes" class="card-img">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600" alt="Estudantes do Ensino Médio" class="card-img">
                 <h3>Ensino Médio</h3>
-                <p>Preparação completa para exames acadêmicos, mercado de trabalho e futuro profissional.</p>
+                <p style="margin-bottom: 10px;">Consolidação e aprofundamento do aprendizado com foco na Base Nacional Comum Curricular e Itinerários Formativos:</p>
+                
+                <h4>🗣️ Linguagens</h4>
+                <p>Língua Portuguesa, Literatura, Inglês, Arte e Educação Física.</p>
+                
+                <h4>📐 Matemática</h4>
+                <p>Matemática.</p>
+                
+                <h4>🔬 Ciências da Natureza</h4>
+                <p>Biologia, Física e Química.</p>
+                
+                <h4>🏛️ Ciências Humanas</h4>
+                <p>História, Geografia, Filosofia e Sociologia.</p>
+
+                <h4>🔄 Parte Diversificada</h4>
+                <p>Componentes curriculares adaptados à realidade local do campo.</p>
             </div>
         </div>
     </div>
@@ -328,27 +363,27 @@
     <div id="aba-instalacoes" class="conteudo-aba">
         <div class="cards">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=500" alt="Biblioteca escolar" class="card-img">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=600" alt="Estantes de Biblioteca" class="card-img">
                 <h3>Biblioteca</h3>
                 <p>Acervo diversificado para incentivar o hábito da leitura e apoiar pesquisas escolares cotidianas.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1562774053-4a0b94688a56?auto=format&fit=crop&q=80&w=500" alt="Laboratório de Informática" class="card-img">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600" alt="Sala de computadores" class="card-img">
                 <h3>Laboratório de Informática</h3>
                 <p>Equipado com computadores modernos para inclusão digital e aulas interativas de tecnologia.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=500" alt="Laboratório de Ciências" class="card-img">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=600" alt="Microscópio em laboratório" class="card-img">
                 <h3>Laboratório de Ciências</h3>
                 <p>Espaço prático para experimentos de química, física e biologia com total segurança.</p>
             </div>
             <div class="card">
-                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQczL_Tc4yO2d6FejNedlFSk4RFDA5vidHrWN8Ai45LcPBKSF4Rxz0wNDrNks7lq1YeGAcbHKaf9Yj9qsI" alt="Refeitório Amplo" class="card-img">
+                <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&q=80&w=600" alt="Mesas de refeitório limpas" class="card-img">
                 <h3>Refeitório</h3>
                 <p>Ambiente higienizado onde são servidas refeições balanceadas preparadas com alimentos de qualidade.</p>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=500" alt="Quadra de esportes" class="card-img">
+                <img src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?auto=format&fit=crop&q=80&w=600" alt="Quadra poliesportiva" class="card-img">
                 <h3>Quadra de Esportes</h3>
                 <p>Estrutura ampla voltada para a prática de educação física, esportes coletivos e eventos.</p>
             </div>
@@ -366,7 +401,10 @@
             <div class="card">
                 <h3>Terça e Quinta</h3>
                 <p style="margin-bottom: 8px;"><strong>Ensino Médio e 9º Ano</strong> — período integral.</p>
-                <p style="color: #4a5568;">Atividades: esportes e exibição de filmes educativos nas terças-feiras, e o projeto cooperativa mirim nas quintas-feiras.</p>
+                <p style="color: #4a5568; margin-bottom: 12px;">Atividades diferenciadas voltadas à formação prática: esportes e exibição de filmes educativos nas terças-feiras, e o projeto cooperativa mirim nas quintas-feiras.</p>
+                
+                <h4>🎨 Atividades do Tempo Integral</h4>
+                <p>Práticas Culturais e Esportivas através de oficinas dedicadas de teatro, música, dança, xadrez e esportes variados.</p>
             </div>
         </div>
     </div>
@@ -409,25 +447,21 @@
     <p>🌱 Educação do Campo • Conhecimento • Futuro</p>
 </footer>
 
-<!-- Código que faz as Abas funcionarem ao clicar -->
 <script>
     function abrirAba(evt, nomeAba) {
         var i, conteudoAba, botoesAbas;
 
-        // Esconde todos os conteúdos das abas
         conteudoAba = document.getElementsByClassName("conteudo-aba");
         for (i = 0; i < conteudoAba.length; i++) {
             conteudoAba[i].style.display = "none";
             conteudoAba[i].classList.remove("ativo");
         }
 
-        // Remove a classe "ativo" de todos os botões
         botoesAbas = document.getElementsByClassName("btn-aba");
         for (i = 0; i < botoesAbas.length; i++) {
             botoesAbas[i].classList.remove("ativo");
         }
 
-        // Mostra a aba atual e adiciona a classe "ativo" ao botão clicado
         document.getElementById(nomeAba).style.display = "block";
         document.getElementById(nomeAba).classList.add("ativo");
         evt.currentTarget.classList.add("ativo");
