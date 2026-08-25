@@ -1,1 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Colégio Castelo Branco</title>
+
+
+   <style>
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+
+
+       body {
+           font-family: Arial, sans-serif;
+           background: #f2f7f3;
+           color: #26352b;
+       }
+
+
+       header {
+           background: #176b3a;
+           color: white;
+           padding: 20px;
+           text-align: center;
+       }
+
+
+       nav {
+           margin-top: 15px;
+       }
+
+
+       nav a {
+           color: white;
+           text-decoration: none;
+           margin: 10px;
+       }
+
+
+       .inicio {
+           background: #dcefe2;
+           text-align: center;
+           padding: 80px 20px;
+       }
+
+
+       .inicio h2 {
+           color: #176b3a;
+           font-size: 40px;
+           margin-bottom: 15px;
+       }
+
+
+       .inicio p {
+           font-size: 18px;
+           margin-bottom: 25px;
+       }
+
+
+       .botao {
+           background: #176b3a;
+           color: white;
+           padding: 12px 20px;
+           border-radius: 8px;
+           text-decoration: none;
+       }
+
+
+       section {
+           max-width: 1000px;
+           margin: auto;
+           padding: 50px 20px;
+       }
+
+
+       h2 {
+           color: #176b3a;
+           text-align: center;
+           margin-bottom: 25px;
+       }
+
+
+       .cards {
+           display: flex;
+           gap: 20px;
+           flex-wrap: wrap;
+       }
+
+
+       .card {
+           background: white;
+           padding: 25px;
+           flex: 1;
+           min-width: 220px;
+           border-radius: 12px;
+           box-shadow: 0 3px 10px #ccc;
+       }
+
+
+       .card h3 {
+           color: #176b3a;
+           margin-bottom: 10px;
+       }
+
+
+       .integral {
+           background: #e5f3e8;
+       }
+
+
+       .localizacao {
+           background: #176b3a;
+           color: white;
+           max-width: none;
+           text-align: center;
+       }
+
+
+       .localizacao h2 {
+           color: white;
+       }
+
+
+       footer {
+           background: #0d4225;
+           color: white;
+           text-align: center;
+           padding: 25px;
+       }
+   </style>
+</head>
+
+
+<body>
+
+
+<header>
+   <h1>🏫 Colégio Estadual do Campo Castelo Branco</h1>
+
+
+   <nav>
+       <a href="#inicio">Início</a>
+       <a href="#escola">Escola</a>
+       <a href="#ensino">Ensino</a>
+       <a href="#integral">Integral</a>
+       <a href="#contato">Contato</a>
+   </nav>
+</header>
+
+
+<div class="inicio" id="inicio">
+   <h2>Educação que transforma</h2>
+
+
+   <p>
+       Colégio Estadual do Campo Castelo Branco
+   </p>
+
+
+   <a class="botao" href="#escola">
+       Conheça nossa escola
+   </a>
+</div>
+
+
+<section id="escola">
+
+
+   <h2>Sobre a Escola</h2>
+
+
+   <p style="text-align:center; line-height:1.7;">
+       O Colégio Estadual do Campo Castelo Branco está localizado
+       no Distrito de Vista Alegre, em Coronel Vivida - PR.
+       Nossa escola valoriza a educação, a comunidade e a realidade
+       do campo.
+   </p>
+
+
+</section>
+
+
+<section id="ensino">
+
+
+   <h2>Nossos Ensinos</h2>
+
+
+   <div class="cards">
+
+
+       <div class="card">
+           <h3>📚 Ensino Fundamental</h3>
+           <p>
+               Formação e desenvolvimento dos nossos estudantes.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <h3>📖 9º Ano</h3>
+           <p>
+               Preparação para a próxima etapa da vida escolar.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <h3>🎓 Ensino Médio</h3>
+           <p>
+               Preparação para estudos, trabalho e futuro.
+           </p>
+       </div>
+
+
+   </div>
+
+
+</section>
+
+
+<section class="integral" id="integral">
+
+
+   <h2>📅 Ensino Integral</h2>
+
+
+   <div class="cards">
+
+
+       <div class="card">
+           <h3>Segunda e Quarta</h3>
+           <p>Ensino Fundamental — período integral. 
+           Atividades: esporte e lazer.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <h3>Terça e Quinta</h3>
+           <p>Ensino Médio e 9º Ano — período integral.
+       Atividades: esporte e filme nas terças e cooperativa mirim na quinta
+           </p>
+       </div>
+
+
+   </div>
+
+
+</section>
+
+
+<section class="localizacao" id="contato">
+
+
+   <h2>📍 Nossa Localização</h2>
+
+
+   <p>
+       Rua Prefeito Frederico Berger, S/N<br>
+       Distrito de Vista Alegre<br>
+       Coronel Vivida - PR<br>
+       CEP: 85550-000<br>
+       Zona Rural
+   </p>
+
+
+   <br>
+
+
+   <a
+       class="botao"
+       href="https://www.google.com/maps/place/Col%C3%A9gio+Estadual+do+Campo+Castelo+Branco+-+EFM/@-25.931842,-52.7108638,17z"
+       target="_blank">
+       📍 Ver no Google Maps
+   </a>
+
+
+</section>
+
+
+<footer>
+   <p>© 2026 Colégio Estadual do Campo Castelo Branco</p>
+   <p>🌱 Educação do Campo • Conhecimento • Futuro</p>
+</footer>
+
+
+</body>
+</html>
+<section id="horarios">
+
+
+   <h2>🕐 Horários da Escola</h2>
+
+
+   <div class="card">
+
+
+       <h3>📅 Segunda a Quinta-feira</h3>
+
+
+       <p><strong>07:20 às 11:25</strong> — Aula normal</p>
+
+
+       <p><strong>11:50 às 12:45</strong> — Atividades</p>
+
+
+       <p><strong>12:50 às 16:55</strong> — Aula normal</p>
+
+
+   </div>
+
+
+   <br>
+
+
+   <div class="card">
+
+
+       <h3>📅 Sexta-feira</h3>
+
+
+       <p><strong>Horário normal de aula.</strong></p>
+
+
+   </div>
+
+
+</section>
 
