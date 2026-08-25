@@ -6,15 +6,14 @@
     <title>Colégio Castelo Branco</title>
 
     <style>
-        /* Variáveis de Cores para facilitar a manutenção e atualizar o visual */
         :root {
-            --cor-primaria: #1b4d3e;     /* Verde floresta fechado, mais institucional */
-            --cor-secundaria: #2c7a5b;   /* Verde médio para destaques */
-            --cor-fundo: #f4f7f6;        /* Fundo off-white suave */
-            --cor-fundo-card: #ffffff;   /* Branco puro para os blocos */
-            --cor-texto: #2b2d42;        /* Grafite escuro para melhor leitura */
-            --cor-texto-claro: #8d99ae;  /* Cinza auxiliar */
-            --cor-destaque: #e9f5ed;     /* Fundo verde bem claro para seções */
+            --cor-primaria: #1b4d3e;     
+            --cor-secundaria: #2c7a5b;   
+            --cor-fundo: #f4f7f6;        
+            --cor-fundo-card: #ffffff;   
+            --cor-texto: #2b2d42;        
+            --cor-texto-claro: #8d99ae;  
+            --cor-destaque: #e9f5ed;     
         }
 
         * {
@@ -30,7 +29,6 @@
             line-height: 1.6;
         }
 
-        /* Topo da página */
         header {
             background: var(--cor-primaria);
             color: white;
@@ -56,20 +54,17 @@
             font-size: 15px;
             font-weight: 500;
             display: inline-block;
-            transition: color 0.2s ease, transform 0.2s ease;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
             color: white;
-            transform: translateY(-1px);
         }
 
-        /* Seção de Destaque / Hero */
         .inicio {
             background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 100%);
             text-align: center;
             padding: 100px 20px;
-            position: relative;
         }
 
         .inicio h2 {
@@ -87,12 +82,11 @@
             font-weight: 500;
         }
 
-        /* Botões */
         .botao {
             background: var(--cor-primaria);
             color: white;
             padding: 14px 28px;
-            border-radius: 30px; /* Botões mais arredondados e modernos */
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
@@ -104,26 +98,22 @@
         .botao:hover {
             background: var(--cor-secundaria);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(27, 77, 62, 0.3);
         }
 
-        /* Seções Gerais */
         section {
             max-width: 1100px;
             margin: auto;
-            padding: 70px 20px;
+            padding: 60px 20px;
         }
 
         section h2 {
             color: var(--cor-primaria);
             text-align: center;
             font-size: 28px;
-            margin-bottom: 35px;
-            position: relative;
+            margin-bottom: 25px;
             font-weight: 700;
         }
 
-        /* Caixa de Matrículas Informativa */
         .matriculas-box {
             background: var(--cor-fundo-card);
             border-radius: 16px;
@@ -137,24 +127,71 @@
             gap: 20px;
         }
 
-        .matriculas-box h3 {
-            font-size: 32px;
-            margin-bottom: 0;
-            min-width: 50px;
+        /* --- ESTILIZAÇÃO DO SISTEMA DE ABAS --- */
+        .container-abas {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        /* Grid de Cartões */
+        .botoes-abas {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-aba {
+            background: none;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--cor-texto-claro);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .btn-aba:hover {
+            color: var(--cor-secundaria);
+            background: rgba(44, 122, 91, 0.05);
+        }
+
+        .btn-aba.ativo {
+            color: var(--cor-primaria);
+            border-bottom: 3px solid var(--cor-primaria);
+            background: var(--cor-destaque);
+        }
+
+        .conteudo-aba {
+            display: none; /* Esconde por padrão */
+            padding: 30px 0;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .conteudo-aba.ativo {
+            display: block; /* Mostra apenas a aba ativa */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- CARDS E GRIDS --- */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            margin-top: 20px;
         }
 
         .card {
             background: var(--cor-fundo-card);
             padding: 24px;
-            border-radius: 16px; /* Cantos mais suaves */
+            border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             border: 1px solid rgba(0, 0, 0, 0.02);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -163,7 +200,7 @@
         }
 
         .card:hover {
-            transform: translateY(-5px); /* Elevação sutil ao passar o mouse */
+            transform: translateY(-5px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
         }
 
@@ -179,7 +216,6 @@
             font-size: 15px;
         }
 
-        /* Estilização das Imagens */
         .card-img {
             width: 100%;
             height: 190px;
@@ -188,58 +224,24 @@
             margin-bottom: 18px;
         }
 
-        /* Seções de fundo alternado para quebrar a monotonia */
-        .integral {
-            background: var(--cor-destaque);
-            max-width: none;
-        }
-        .integral-wrapper {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .horarios-secao {
-            background: var(--cor-fundo-card);
-        }
-
         .card-unico {
             max-width: 100% !important;
             width: 100%;
             margin-bottom: 15px;
         }
 
-        /* Localização e Contato */
         .localizacao {
             background: var(--cor-primaria);
             color: white;
-            max-width: none;
             text-align: center;
             padding: 80px 20px;
         }
 
-        .localizacao h2 {
-            color: white;
-        }
+        .localizacao h2 { color: white; }
+        .localizacao p { font-size: 17px; opacity: 0.9; margin-bottom: 30px; }
+        .localizacao .botao { background: white; color: var(--cor-primaria); }
+        .localizacao .botao:hover { background: var(--cor-destaque); }
 
-        .localizacao p {
-            font-size: 17px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-
-        .localizacao .botao {
-            background: white;
-            color: var(--cor-primaria);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .localizacao .botao:hover {
-            background: var(--cor-destaque);
-            color: var(--cor-primaria);
-        }
-
-        /* Rodapé */
         footer {
             background: #0b221a;
             color: rgba(255, 255, 255, 0.7);
@@ -248,17 +250,12 @@
             font-size: 14px;
         }
 
-        footer p:first-child {
-            margin-bottom: 8px;
-            color: white;
-            font-weight: 500;
-        }
+        footer p:first-child { margin-bottom: 8px; color: white; font-weight: 500; }
 
-        /* Responsividade para telas menores */
         @media (max-width: 600px) {
             .inicio h2 { font-size: 30px; }
             .matriculas-box { flex-direction: column; text-align: center; }
-            nav a { margin: 5px 8px; font-size: 14px; }
+            .btn-aba { width: 100%; text-align: center; border-radius: 8px; }
         }
     </style>
 </head>
@@ -270,9 +267,7 @@
     <nav>
         <a href="#inicio">Início</a>
         <a href="#escola">Escola</a>
-        <a href="#ensino">Ensino</a>
-        <a href="#instalacoes">Instalações</a>
-        <a href="#integral">Integral</a>
+        <a href="#secao-abas">Informações gerais</a>
         <a href="#horarios">Horários</a>
         <a href="#contato">Contato</a>
     </nav>
@@ -292,7 +287,7 @@
     </p>
 
     <div class="matriculas-box">
-        <h3>📊</h3>
+        <span style="font-size: 32px;">📊</span>
         <div>
             <h4 style="color: var(--cor-primaria); margin-bottom: 5px; font-size: 18px;">Volume de Matrículas</h4>
             <p style="font-size: 15px; color: #4a5568;">O corpo discente do colégio oscila historicamente entre <strong>72 e 198 alunos vinculados</strong>. Atualmente, registramos o atendimento de <strong>75 estudantes ativos</strong> em nossos levantamentos mais recentes, mantendo o compromisso com o ensino personalizado.</p>
@@ -300,77 +295,74 @@
     </div>
 </section>
 
-<section id="ensino" style="background: #ffffff; max-width: none;">
-    <div style="max-width: 1100px; margin: auto; padding: 0 20px;">
-        <h2>Nossos Ensinos</h2>
+<!-- ================= SEÇÃO DE ABAS INTERATIVAS ================= -->
+<div class="container-abas" id="secao-abas">
+    <div class="botoes-abas">
+        <button class="btn-aba ativo" onclick="abrirAba(event, 'aba-ensino')">📚 Nossos Ensinos</button>
+        <button class="btn-aba" onclick="abrirAba(event, 'aba-instalacoes')">🏫 Instalações</button>
+        <button class="btn-aba" onclick="abrirAba(event, 'aba-integral')">📅 Período Integral</button>
+    </div>
+
+    <!-- Conteúdo Aba: Ensino -->
+    <div id="aba-ensino" class="conteudo-aba ativo">
         <div class="cards">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=500" alt="Estudantes em sala de aula" class="card-img">
-                <h3>📚 Ensino Fundamental</h3>
+                <h3>Ensino Fundamental</h3>
                 <p>Formação sólida e desenvolvimento integral dos nossos estudantes nos anos iniciais e finais.</p>
             </div>
-
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=500" alt="Livro aberto e materiais de estudo" class="card-img">
-                <h3>📖 9º Ano</h3>
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=500" alt="Livro aberto" class="card-img">
+                <h3>9º Ano</h3>
                 <p>Preparação intensa e focada para a transição para o Ensino Médio.</p>
             </div>
-
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=500" alt="Jovens estudantes sorrindo" class="card-img">
-                <h3>🎓 Ensino Médio</h3>
-                <p>Preparação completa para exames acadêmicos, inserção no mercado de trabalho e o futuro profissional.</p>
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=500" alt="Jovens estudantes" class="card-img">
+                <h3>Ensino Médio</h3>
+                <p>Preparação completa para exames acadêmicos, mercado de trabalho e futuro profissional.</p>
             </div>
         </div>
     </div>
-</section>
 
-<section id="instalacoes">
-    <h2>🏫 Nossas Instalações</h2>
-    <p style="text-align: center; margin-bottom: 40px; color: #4a5568; font-size: 16px;">Oferecemos uma infraestrutura completa para apoiar o aprendizado teórico e prático de nossos alunos:</p>
-    <div class="cards">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=500" alt="Biblioteca escolar" class="card-img">
-            <h3>📚 Biblioteca</h3>
-            <p>Acervo diversificado para incentivar o hábito da leitura e apoiar pesquisas escolares cotidianas.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1562774053-4a0b94688a56?auto=format&fit=crop&q=80&w=500" alt="Laboratório de Informática" class="card-img">
-            <h3>💻 Laboratório de Informática</h3>
-            <p>Equipado com computadores modernos para inclusão digital e aulas interativas de tecnologia.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=500" alt="Laboratório de Ciências" class="card-img">
-            <h3>🔬 Laboratório de Ciências</h3>
-            <p>Espaço prático para experimentos de química, física e biologia com total segurança.</p>
-        </div>
-
-        <div class="card">
-            <img src=https://www.google.com/imgres?q=refeitorio%20escolar&imgurl=https%3A%2F%2Fselesnafes.com%2Fwp-content%2Fuploads%2F2017%2F05%2FCCA-refeitorio.jpg&imgrefurl=https%3A%2F%2Fselesnafes.com%2F2017%2F05%2Fescola-da-exemplo-e-constroi-1o-refeitorio-climatizado-da-rede-publica%2F&docid=CSIRz4dcRZfbJM&tbn&w=640&h=391&hcb=2&ved=2ahUKEwjQx4vV97uWAxUmqpUCHZ_9MHEQnPAOegUIlAUQAA" alt="Refeitório" class="card-img">
-            <h3>🍏 Refeitório</h3>
-            <p>Ambiente higienizado onde são servidas refeições balanceadas preparadas com alimentos de qualidade.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=500" alt="Quadra de esportes" class="card-img">
-            <h3>🏀 Quadra de Esportes</h3>
-            <p>Estrutura ampla voltada para a prática de educação física, esportes coletivos e eventos da comunidade.</p>
+    <!-- Conteúdo Aba: Instalações -->
+    <div id="aba-instalacoes" class="conteudo-aba">
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=500" alt="Biblioteca escolar" class="card-img">
+                <h3>Biblioteca</h3>
+                <p>Acervo diversificado para incentivar o hábito da leitura e apoiar pesquisas escolares cotidianas.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1562774053-4a0b94688a56?auto=format&fit=crop&q=80&w=500" alt="Laboratório de Informática" class="card-img">
+                <h3>Laboratório de Informática</h3>
+                <p>Equipado com computadores modernos para inclusão digital e aulas interativas de tecnologia.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=500" alt="Laboratório de Ciências" class="card-img">
+                <h3>Laboratório de Ciências</h3>
+                <p>Espaço prático para experimentos de química, física e biologia com total segurança.</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQczL_Tc4yO2d6FejNedlFSk4RFDA5vidHrWN8Ai45LcPBKSF4Rxz0wNDrNks7lq1YeGAcbHKaf9Yj9qsI" alt="Refeitório Amplo" class="card-img">
+                <h3>Refeitório</h3>
+                <p>Ambiente higienizado onde são servidas refeições balanceadas preparadas com alimentos de qualidade.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=500" alt="Quadra de esportes" class="card-img">
+                <h3>Quadra de Esportes</h3>
+                <p>Estrutura ampla voltada para a prática de educação física, esportes coletivos e eventos.</p>
+            </div>
         </div>
     </div>
-</section>
 
-<section class="integral" id="integral">
-    <div class="integral-wrapper">
-        <h2>📅 Ensino Integral</h2>
+    <!-- Conteúdo Aba: Integral -->
+    <div id="aba-integral" class="conteudo-aba">
         <div class="cards">
             <div class="card">
                 <h3>Segunda e Quarta</h3>
                 <p style="margin-bottom: 8px;"><strong>Ensino Fundamental</strong> — período integral.</p>
                 <p style="color: #4a5568;">Atividades dinâmicas de esporte, cultura e lazer.</p>
             </div>
-
             <div class="card">
                 <h3>Terça e Quinta</h3>
                 <p style="margin-bottom: 8px;"><strong>Ensino Médio e 9º Ano</strong> — período integral.</p>
@@ -378,21 +370,25 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section id="horarios" class="horarios-secao">
-    <h2>🕐 Horários da Escola</h2>
-    <div class="cards" style="max-width: 800px; margin: auto;">
-        <div class="card card-unico">
-            <h3>📅 Segunda a Quinta-feira</h3>
-            <p style="margin: 6px 0;"><strong>07:20 às 11:25</strong> — Aula normal</p>
-            <p style="margin: 6px 0;"><strong>11:50 às 12:45</strong> — Intervalo para Almoço / Atividades</p>
-            <p style="margin: 6px 0;"><strong>12:50 às 16:55</strong> — Aula normal</p>
-        </div>
+<!-- ============================================================= -->
 
-        <div class="card card-unico">
-            <h3>📅 Sexta-feira</h3>
-            <p><strong>Horário normal de aula.</strong> Período parcial conforme a grade horária da turma.</p>
+<section id="horarios" style="background: var(--cor-fundo-card); max-width: none;">
+    <div style="max-width: 1100px; margin: auto; padding: 0 20px;">
+        <h2>🕐 Horários da Escola</h2>
+        <div class="cards" style="max-width: 800px; margin: auto;">
+            <div class="card card-unico">
+                <h3>📅 Segunda a Quinta-feira</h3>
+                <p style="margin: 6px 0;"><strong>07:20 às 11:25</strong> — Aula normal</p>
+                <p style="margin: 6px 0;"><strong>11:50 às 12:45</strong> — Intervalo para Almoço / Atividades</p>
+                <p style="margin: 6px 0;"><strong>12:50 às 16:55</strong> — Aula normal</p>
+            </div>
+
+            <div class="card card-unico">
+                <h3>📅 Sexta-feira</h3>
+                <p><strong>Horário normal de aula.</strong> Período parcial conforme a grade horária da turma.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -412,6 +408,31 @@
     <p>© 2026 Colégio Estadual do Campo Castelo Branco</p>
     <p>🌱 Educação do Campo • Conhecimento • Futuro</p>
 </footer>
+
+<!-- Código que faz as Abas funcionarem ao clicar -->
+<script>
+    function abrirAba(evt, nomeAba) {
+        var i, conteudoAba, botoesAbas;
+
+        // Esconde todos os conteúdos das abas
+        conteudoAba = document.getElementsByClassName("conteudo-aba");
+        for (i = 0; i < conteudoAba.length; i++) {
+            conteudoAba[i].style.display = "none";
+            conteudoAba[i].classList.remove("ativo");
+        }
+
+        // Remove a classe "ativo" de todos os botões
+        botoesAbas = document.getElementsByClassName("btn-aba");
+        for (i = 0; i < botoesAbas.length; i++) {
+            botoesAbas[i].classList.remove("ativo");
+        }
+
+        // Mostra a aba atual e adiciona a classe "ativo" ao botão clicado
+        document.getElementById(nomeAba).style.display = "block";
+        document.getElementById(nomeAba).classList.add("ativo");
+        evt.currentTarget.classList.add("ativo");
+    }
+</script>
 
 </body>
 </html>
